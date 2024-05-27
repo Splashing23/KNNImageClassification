@@ -51,6 +51,10 @@ class NN:
 
     # Loss Function
 
+class relu:
+    def deriv():
+        return 
+
 # Activation functions
 class ActivFunc:
     def relu():
@@ -70,5 +74,10 @@ class ActivFunc:
 # Layer
 class Layer:
     def __init__(self, iDim, oDim, activation=None):
-        self.params = np.random.rand(iDim, oDim)
+        self.params = np.random.rand(iDim + 1, oDim)
 
+    def forward(self, x):
+        return np.dot(params, x)
+    
+    def backward(upstream):
+        backprop = activation.deriv * upstream
